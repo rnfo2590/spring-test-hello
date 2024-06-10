@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.entity.Item;
-import com.example.demo.model.Account;
+import com.example.demo.model.Accounts;
 import com.example.demo.repository.ItemRepository;
 
 import jakarta.servlet.http.HttpSession;
@@ -28,7 +28,7 @@ public class ItemController {
 	private HttpSession session;
 	
 	@Autowired
-	private Account account;
+	private Accounts account;
 	
 //	@GetMapping({"/login","/logout"})
 //	public String in() {

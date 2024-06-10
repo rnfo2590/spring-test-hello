@@ -9,7 +9,7 @@ import lombok.Data;
 @SessionScope
 @Component
 
-public class Account {
+public class Accounts {
 	private Integer id;
 	private String name;
 

@@ -10,14 +10,14 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.entity.Usert;
-import com.example.demo.model.Account;
+import com.example.demo.model.Accounts;
 import com.example.demo.repository.UsertRepository;
 
 import jakarta.servlet.http.HttpSession;
 
 @Controller
 
-public class AccountController {
+public class AccountsController {
 	@Autowired
 	UsertRepository usertRepository;
 	
@@ -25,17 +25,17 @@ public class AccountController {
 	HttpSession session;
 	
 	@Autowired
-	Account account;
+	Accounts accounts;
 	
 	@GetMapping({"/login", "/logout"})
 	public String in() {
 		session.invalidate();
 		
-		return "/login";
+		return "/login1";
 		
 	}
 	
-	@PostMapping("/login")
+	@PostMapping("/login1")
 		public String login(Model model,
 				@RequestParam("id")Integer id,
 				@RequestParam("name")String name
@@ -55,12 +55,12 @@ public class AccountController {
 		if(usert==null) {
 			
 			model.addAttribute("error", "ログインできません");
-			return "/login";
+			return "/login1";
 		}
 	
 		
 		String name1=usert.getName();
-		account.setName(name1);
+		accounts.setName(name1);
 		
 
 		return "redirect:/items";
