@@ -30,25 +30,23 @@ public class ItemController {
 	@Autowired
 	private Account account;
 	
-	@GetMapping({"/login","/logout"})
-	public String in() {
-		session.invalidate();
-		return "/login";
-	}
-	
-	@PostMapping("/login")
-	public String login(Model model,
-			@RequestParam("logname")String logname
-			) {
-		
-		account.setLogname(logname);
-		
-//		List<Item>list=itemRepository.findAll();
-//		model.addAttribute("list", list);
-		
-		return "redirect:/items";
-		
-	}
+//	@GetMapping({"/login","/logout"})
+//	public String in() {
+//		session.invalidate();
+//		return "/login";
+//	}
+//	
+//	@PostMapping("/login")
+//	public String login(Model model,
+//			@RequestParam("logname")String logname
+//			) {
+//		
+//		account.setLogname(logname);
+//		
+//
+//		return "redirect:/items";
+//		
+//	}
 
 	
 

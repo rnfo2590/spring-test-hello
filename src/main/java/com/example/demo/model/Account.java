@@ -10,6 +10,7 @@ import lombok.Data;
 @Component
 
 public class Account {
-	private String logname;
+	private Integer id;
+	private String name;
 
 }

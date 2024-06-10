@@ -12,8 +12,7 @@ public interface ItemRepository extends JpaRepository<Item, Integer> {
 	
 	List<Item>findByNameLike(String prod);
 	
-	List<Item>findByPriceLessThanEqual(Integer maxPrice);
-	
+	List<Item>findByPriceLessThanEqual(Integer maxPrice);	
 	
 	List<Item>findByNameLikeAndPriceLessThanEqual(String prod, Integer maxPrice );
 	
